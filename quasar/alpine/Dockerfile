@@ -1,0 +1,4 @@
+FROM node:lts-alpine3.16
+
+RUN npm install -g npm @quasar/cli
+WORKDIR /app
