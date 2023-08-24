@@ -1,5 +1,6 @@
-FROM node:lts-alpine3.16
+FROM node:lts-alpine3.18
 
-RUN npm install -g npm @quasar/cli
-RUN apk add git
+RUN npm install -g npm @quasar/cli && \
+ apk add git openssh-client rsync py3-pip && \
+ pip install mkdocs
 WORKDIR /app
